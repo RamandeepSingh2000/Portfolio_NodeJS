@@ -4,6 +4,10 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/', function(req, res){
+    res.redirect('/home');
+})
+
 router.get('/home', function(req, res, next){
     res.render('home', {title: 'Home'});
 });
